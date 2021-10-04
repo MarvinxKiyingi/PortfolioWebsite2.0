@@ -23,6 +23,9 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.constructionAnimation {
+  max-width: 80%;
+}
 
 .App-link {
   color: #61dafb;
