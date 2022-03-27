@@ -17,7 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="content">
-          <h1>Great things in things in the works</h1>
+          <h1>Great things in the works</h1>
 
           <div className="constructionAnimation">
             <Lottie options={constructionImgData} />
