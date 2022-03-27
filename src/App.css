@@ -28,9 +28,6 @@
   flex-direction: column;
   align-items: center;
 }
-/* @media (min-width){
-  
-} */
 .App-header h1 {
   max-width: 80%;
 }
