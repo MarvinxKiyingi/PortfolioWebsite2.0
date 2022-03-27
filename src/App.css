@@ -14,14 +14,25 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #e75d39;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* @media (min-width){
+  
+} */
+.App-header h1 {
+  max-width: 80%;
 }
 .constructionAnimation {
   max-width: 80%;

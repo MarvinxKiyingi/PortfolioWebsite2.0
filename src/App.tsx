@@ -16,11 +16,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <div className="constructionAnimation">
-          <Lottie
-            options={constructionImgData}
-            // height={400} width={400}
-          />
+        <div className="content">
+          <h1>Great things in things in the works</h1>
+
+          <div className="constructionAnimation">
+            <Lottie options={constructionImgData} />
+          </div>
         </div>
       </header>
     </div>
