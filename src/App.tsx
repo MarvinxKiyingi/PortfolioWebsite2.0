@@ -3,6 +3,9 @@ import React from 'react';
 import './App.css';
 import Lottie from 'react-lottie';
 import constructionImg from './Animations/construction.json';
+import { ThemeProvider } from '@mui/material/styles';
+import { mainTheme } from './styles/theme/theme';
+import { Typography } from '@mui/material';
 
 function App() {
   const constructionImgData = {
@@ -14,17 +17,19 @@ function App() {
     },
   };
   return (
-    <div className="App">
-      <header className="App-header">
-        <div className="content">
-          <h1>Great things in the works</h1>
+    <ThemeProvider theme={mainTheme}>
+      <div className="App">
+        <header className="App-header">
+          <div className="content">
+            <Typography variant={'h1'}>Great things in the works</Typography>
 
-          <div className="constructionAnimation">
-            <Lottie options={constructionImgData} />
+            <div className="constructionAnimation">
+              <Lottie options={constructionImgData} />
+            </div>
           </div>
-        </div>
-      </header>
-    </div>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
