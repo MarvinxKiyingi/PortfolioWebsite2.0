@@ -1,34 +1,33 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import Lottie from 'react-lottie';
-import constructionImg from './Animations/construction.json';
 import { ThemeProvider } from '@mui/material/styles';
+import { Logo } from './components/Logo/Logo';
+import { AppWrapper } from './components/AppWrapper/AppWrapper';
+import { Hero } from './components/Hero/Hero';
+import { NavBar } from './components/Navbar/NavBar';
 import { mainTheme } from './styles/theme/theme';
-import { Typography } from '@mui/material';
+import { HamburgerMenu } from './components/HamburgerMenu/HamburgerMenu';
+import { HeroContent } from './components/HeroContent/HeroContent';
+
+import bgImg from './styles/images/99-Roman.jpg';
 
 function App() {
-  const constructionImgData = {
-    loop: true,
-    autoplay: true,
-    animationData: constructionImg,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
   return (
     <ThemeProvider theme={mainTheme}>
-      <div className="App">
-        <header className="App-header">
-          <div className="content">
-            <Typography variant={'h1'}>Great things in the works</Typography>
-
-            <div className="constructionAnimation">
-              <Lottie options={constructionImgData} />
-            </div>
-          </div>
-        </header>
-      </div>
+      <AppWrapper className="AppWrapper">
+        <Hero className="Hero">
+          <img
+            className="heroImg"
+            src={bgImg}
+            alt="background img"
+            aria-hidden="true"
+          />
+          <div className="grain" aria-hidden="true"></div>
+          <NavBar className="Navbar">
+            <Logo />
+            <HamburgerMenu />
+          </NavBar>
+          <HeroContent />
+        </Hero>
+      </AppWrapper>
     </ThemeProvider>
   );
 }
