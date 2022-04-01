@@ -5,4 +5,9 @@ export const NavBar = styled('nav')(({ theme }) => ({
   backgroundColor: 'transparent',
   display: 'flex',
   justifyContent: 'space-between',
+  '.BurgerMenuBtn': {
+    [theme.breakpoints.up('md')]: {
+      display: 'none',
+    },
+  },
 }));
