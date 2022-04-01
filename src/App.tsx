@@ -26,7 +26,6 @@ function App() {
             <HamburgerMenu />
           </NavBar>
           <HeroContent />
-          <HeroContent />
         </Hero>
       </AppWrapper>
     </ThemeProvider>
