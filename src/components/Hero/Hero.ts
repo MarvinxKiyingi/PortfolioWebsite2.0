@@ -3,9 +3,9 @@ import noise from '../../styles/images/noise.png';
 
 export const Hero = styled('header')((theme) => ({
   position: 'relative',
-  backgroundColor: '#d7e3e0',
+  backgroundColor: '#000000',
   width: '100%',
-  height: '100vh',
+  minHeight: '100vh',
   display: 'flex',
   flexDirection: 'column',
   '.heroImg': {
@@ -15,6 +15,7 @@ export const Hero = styled('header')((theme) => ({
     objectFit: 'cover',
     objectPosition: 'top left',
     backgroundRepeat: 'no-repeat',
+    filter: 'opacity(80%)',
   },
   '.grain': {
     position: 'absolute',
@@ -23,10 +24,9 @@ export const Hero = styled('header')((theme) => ({
     backgroundImage: `url(${noise})`,
     backgroundRepeat: 'repeat',
     mixBlendMode: 'overlay',
-    backgroundColor: 'saddlebrown',
-    opacity: '.1',
+    filter: 'opacity(12%)',
   },
-  '.Navbar, .HeroContant': {
+  '.Navbar, .HeroContainer': {
     zIndex: '10',
   },
 }));
