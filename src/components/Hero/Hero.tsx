@@ -36,6 +36,9 @@ const HeroContainer = styled('header')((theme) => ({
   },
   '.Navbar': {
     zIndex: '11',
+    '.BurgerMenuBtn': {
+      zIndex: '1201',
+    },
   },
 }));
 

@@ -239,8 +239,12 @@ export const HeroContent = () => {
 
         <div className="ctaButtonContainer">
           <div className="ctaButtonContainer-ctaButtonWrapper">
-            <Button className="cta" variant="contained">
-              My Creations
+            <Button
+              className="cta"
+              variant="contained"
+              href="https://www.linkedin.com/in/marvin-kiyingi-371525184/"
+            >
+              Contact
             </Button>
           </div>
         </div>

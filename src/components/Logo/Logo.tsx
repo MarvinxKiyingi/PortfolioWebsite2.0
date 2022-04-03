@@ -2,6 +2,7 @@ import { Link, styled } from '@mui/material';
 
 const InitialsLogo = styled(Link)(({ theme }) => ({
   gridColumn: '1/2',
+  alignSelf: 'center',
 }));
 export const Logo = () => {
   return (
