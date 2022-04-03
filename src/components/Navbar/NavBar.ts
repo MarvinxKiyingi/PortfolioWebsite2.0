@@ -1,12 +1,17 @@
 import { styled } from '@mui/material';
 
 export const NavBar = styled('nav')(({ theme }) => ({
-  padding: theme.spacing(2, 2),
+  display: 'grid',
+  gridTemplateColumns: 'repeat(4,1fr)',
+  gridGap: '20px',
+  margin: '20px 20px',
   backgroundColor: 'transparent',
-  display: 'flex',
-  justifyContent: 'space-between',
+  [theme.breakpoints.up('sm')]: {
+    gridTemplateColumns: 'repeat(12,1fr)',
+  },
+
   '.BurgerMenuBtn': {
-    [theme.breakpoints.up('md')]: {
+    [theme.breakpoints.up('sm')]: {
       display: 'none',
     },
   },
