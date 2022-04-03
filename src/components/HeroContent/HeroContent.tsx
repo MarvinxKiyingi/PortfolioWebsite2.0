@@ -1,5 +1,5 @@
 import { Button, styled, Typography } from '@mui/material';
-import meEmoji from '../../styles/images/Me.png';
+import meEmoji from '../../styles/images/meemoji.png';
 
 const ContentConatiner = styled('div')(({ theme }) => ({
   margin: 'auto 20px',
