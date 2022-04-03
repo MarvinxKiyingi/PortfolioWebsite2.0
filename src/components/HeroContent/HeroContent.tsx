@@ -1,48 +1,41 @@
 import { Button, styled, Typography } from '@mui/material';
-import meEmoji from '../../styles/images/ME.png';
+import meEmoji from '../../styles/images/Me.png';
 
 const ContentConatiner = styled('div')(({ theme }) => ({
-  dispaly: 'flex',
-  margin: '0px auto',
-  width: '100%',
-
-  [theme.breakpoints.up('xl')]: {
-    maxWidth: '80%',
-  },
+  margin: 'auto 20px',
 
   '.HeroContant': {
-    margin: theme.spacing(0, 2),
     minHeight: '80vh',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'space-evenly',
-    [theme.breakpoints.up('md')]: {
-      justifyContent: 'center',
-    },
-    [theme.breakpoints.up('lg')]: {
-      margin: theme.spacing(0, 3),
+    display: 'grid',
+    gridTemplateColumns: 'repeat(4,1fr)',
+    gridGap: '20px',
+    [theme.breakpoints.up('sm')]: {
+      gridTemplateColumns: 'repeat(12,1fr)',
     },
 
     h1: {
-      textTransform: 'uppercase',
       color: theme.palette.primary.contrastText,
-    },
-
-    '.block': {
-      margin: theme.spacing(0, 0, 2),
-    },
-
-    '.firstBlock': {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
+      textTransform: 'uppercase',
+      ...theme.typography.h4,
+      fontSize: '3rem',
       [theme.breakpoints.up('sm')]: {
-        '@media (orientation: landscape)': {
-          gridTemplateColumns: '1fr 3fr',
-        },
+        fontSize: '4.9rem',
       },
       [theme.breakpoints.up('md')]: {
-        display: 'grid',
-        gridTemplateColumns: '3fr 1fr',
+        fontSize: 'clamp(24px, 6vw, 178px)',
+      },
+    },
+
+    '.firstHeadingContainer': {
+      gridColumn: '1/-1',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      gridGap: '20px',
+      alignSelf: 'center',
+      [theme.breakpoints.up('sm')]: {
+        gridTemplateColumns: 'repeat(12,1fr)',
+      },
+      [theme.breakpoints.up('md')]: {
         '& div:nth-of-type(1)': {
           order: 2,
         },
@@ -52,52 +45,59 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       },
 
       '.imgContainer': {
+        gridColumn: '1/4',
+        margin: '0px 25px',
+        maxWidth: '160px',
+        height: '100%',
+        [theme.breakpoints.up('sm')]: {
+          gridColumn: '2/5',
+          margin: 'unset',
+        },
+        [theme.breakpoints.up('md')]: {
+          gridColumn: '9/11',
+          margin: '0 0 -20%',
+          maxWidth: '80%',
+        },
+        [theme.breakpoints.up('lg')]: {
+          margin: '0 0 -10%',
+        },
+
         '.meEmoji': {
-          width: '70%',
-          [theme.breakpoints.up('sm')]: {
-            '@media (orientation: landscape)': {
-              width: 'unset',
-            },
-          },
-          [theme.breakpoints.up('lg')]: {
-            width: '60%',
-            display: 'flex',
-            maxWidth: 335,
-          },
+          width: '100%',
         },
       },
-      '.firstBlock-headingContainer': {
-        textAlign: 'end',
+
+      '.firstHeadingContainer-headingWrapper': {
+        gridColumn: '4/5',
         display: 'flex',
-        alignItems: 'flex-end',
+        alignItems: 'center',
         justifyContent: 'end',
-        [theme.breakpoints.up('md')]: {
-          alignItems: 'center',
-          justifyContent: 'start',
+        [theme.breakpoints.up('sm')]: {
+          gridColumn: '6/12',
+          alignItems: 'end',
         },
+        [theme.breakpoints.up('md')]: {
+          gridColumn: '2/9',
+          alignItems: 'end',
+          justifyContent: 'initial',
+        },
+
         h1: {
-          ...theme.typography.h4,
-          fontSize: 'clamp(24px, 12vw, 108px)',
+          textAlign: 'end',
           [theme.breakpoints.up('md')]: {
-            margin: theme.spacing(10, 0, 0),
-            fontSize: 'clamp(24px, 7vw, 108px)',
+            textAlign: 'initial',
           },
         },
       },
     },
 
-    '.secondBlock': {
+    '.secondHeadingContainer': {
+      gridColumn: '1/-2',
       display: 'flex',
-      [theme.breakpoints.up('md')]: {
-        height: 209,
+      [theme.breakpoints.up('sm')]: {
+        gridColumn: '2/-2',
       },
-      h1: {
-        ...theme.typography.h4,
-        fontSize: 'clamp(24px, 12vw, 108px)',
-        [theme.breakpoints.up('md')]: {
-          fontSize: 'clamp(24px, 7vw, 108px)',
-        },
-      },
+
       '.rotatedContainer': {
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.primary.contrastText,
@@ -105,40 +105,97 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         display: 'flex',
         alignItems: 'center',
         marginRight: theme.spacing(),
+        padding: '6px',
+        [theme.breakpoints.up('sm')]: {
+          padding: theme.spacing(),
+        },
+        [theme.breakpoints.up('xl')]: {
+          padding: '18px',
+        },
 
         h2: {
           textTransform: 'uppercase',
           writingMode: 'vertical-lr',
-          letterSpacing: 4,
+          letterSpacing: 8,
           ...theme.typography.h6,
+          lineHeight: 'unset ',
+          [theme.breakpoints.up('sm')]: {
+            letterSpacing: 16,
+          },
           [theme.breakpoints.up('md')]: {
-            letterSpacing: 8,
+            letterSpacing: 12,
+            ...theme.typography.h5,
+            lineHeight: 'unset ',
           },
           [theme.breakpoints.up('lg')]: {
-            letterSpacing: theme.spacing(),
+            ...theme.typography.h4,
+            lineHeight: 'unset ',
           },
+          [theme.breakpoints.up('xl')]: {},
         },
       },
-      '.secondBlock-headingContainer': {
-        [theme.breakpoints.up('md')]: {
-          display: 'flex',
-          alignItems: 'center',
+
+      '.secondHeadingContainer-headingWrapper': {
+        display: 'flex',
+        alignItems: 'center',
+        h1: {
+          [theme.breakpoints.up('md')]: {
+            margin: theme.spacing(2, 0, 0),
+          },
+        },
+        [theme.breakpoints.up('sm')]: {
+          gridColumn: '2/-2',
         },
       },
     },
 
-    '.thirdBlock': {
-      fontSize: 'clamp(14px, 4vw, 20px)',
-      maxWidth: 1200,
+    '.descriptionText': {
+      gridColumn: '1/-1',
+      height: 'min-content',
+      alignSelf: 'center ',
       color: theme.palette.primary.contrastText,
+      fontSize: '1rem',
       fontWeight: 500,
+      [theme.breakpoints.up('sm')]: {
+        gridColumn: '2/-2',
+        fontSize: '1.5rem',
+      },
+      [theme.breakpoints.up('lg')]: {
+        fontSize: '1.8rem',
+      },
     },
 
     '.ctaButtonContainer': {
-      display: 'flex',
-      justifyContent: 'center',
-      button: {
-        width: 240,
+      gridColumn: '1/-1',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(4,1fr)',
+      margin: 'auto 0px',
+      [theme.breakpoints.up('md')]: {
+        gridTemplateColumns: 'repeat(12,1fr)',
+      },
+      [theme.breakpoints.up('md')]: {
+        gridTemplateColumns: 'repeat(12,1fr)',
+      },
+
+      '.ctaButtonContainer-ctaButtonWrapper': {
+        gridColumn: '1/-1',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        [theme.breakpoints.up('md')]: {
+          gridColumn: '2/-2',
+        },
+      },
+
+      '.cta': {
+        width: '100%',
+        maxWidth: '241px',
+        [theme.breakpoints.up('lg')]: {
+          padding: '16px 15px',
+        },
+        [theme.breakpoints.up('xl')]: {
+          maxWidth: '301px',
+        },
       },
     },
   },
@@ -148,40 +205,48 @@ export const HeroContent = () => {
   return (
     <ContentConatiner className="HeroContainer">
       <div className="HeroContant">
-        <div className="firstBlock block">
+        <div className="firstHeadingContainer">
           <div className="imgContainer">
             <img className="meEmoji" src={meEmoji} alt="MeEmoji" />
           </div>
-          <div className="firstBlock-headingContainer">
+
+          <div className="firstHeadingContainer-headingWrapper">
             <Typography component={'h1'} variant={'h3'}>
               Hi! i'm Marvin
             </Typography>
           </div>
         </div>
 
-        <div className="secondBlock block">
+        <div className="secondHeadingContainer">
           <div className="rotatedContainer">
             <Typography component={'h2'} variant={'h5'}>
               Junior
             </Typography>
           </div>
-          <div className="secondBlock-headingContainer">
+
+          <div className="secondHeadingContainer-headingWrapper">
             <Typography component={'h1'} variant={'h3'}>
               Frontend Developer
             </Typography>
           </div>
         </div>
 
-        <Typography className="thirdBlock block" component={'p'}>
+        <Typography className="descriptionText " component={'p'}>
           Who is passionated about bringing both technical and pixel perfect
           visuals of digital products to life through, clean, responsive code
           with the users in minde.
         </Typography>
 
         <div className="ctaButtonContainer">
-          <Button className="cta" variant="contained">
-            My Creations
-          </Button>
+          <div className="ctaButtonContainer-ctaButtonWrapper">
+            <Button
+              className="cta"
+              variant="contained"
+              href="https://www.linkedin.com/in/marvin-kiyingi-371525184/"
+            >
+              Contact
+            </Button>
+          </div>
         </div>
       </div>
     </ContentConatiner>
