@@ -3,6 +3,8 @@ import meEmoji from '../../styles/images/meemoji.png';
 
 const ContentConatiner = styled('div')(({ theme }) => ({
   margin: 'auto 20px',
+  // maxWidth: 1520,
+  // maxWidth: 2520,
 
   '.HeroContant': {
     minHeight: '80vh',
@@ -17,7 +19,10 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       color: theme.palette.primary.contrastText,
       textTransform: 'uppercase',
       ...theme.typography.h4,
-      fontSize: '3rem',
+      fontSize: '2.5rem',
+      [theme.breakpoints.up('xs')]: {
+        fontSize: '3rem',
+      },
       [theme.breakpoints.up('sm')]: {
         fontSize: '4.9rem',
       },
@@ -46,12 +51,16 @@ const ContentConatiner = styled('div')(({ theme }) => ({
 
       '.imgContainer': {
         gridColumn: '1/4',
-        margin: '0px 25px',
+        margin: '0px 10px',
         maxWidth: '160px',
         height: '100%',
+        [theme.breakpoints.up('xs')]: {
+          margin: '0px 15px',
+        },
         [theme.breakpoints.up('sm')]: {
-          gridColumn: '2/5',
+          gridColumn: '3/6',
           margin: 'unset',
+          // margin: '0px 25px',
         },
         [theme.breakpoints.up('md')]: {
           gridColumn: '9/11',
@@ -92,7 +101,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
     },
 
     '.secondHeadingContainer': {
-      gridColumn: '1/-2',
+      gridColumn: '1/-1',
       display: 'flex',
       [theme.breakpoints.up('sm')]: {
         gridColumn: '2/-2',
@@ -118,7 +127,10 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           writingMode: 'vertical-lr',
           letterSpacing: 8,
           ...theme.typography.h6,
-          lineHeight: 'unset ',
+          fontSize: 14,
+          [theme.breakpoints.up('xs')]: {
+            ...theme.typography.h6,
+          },
           [theme.breakpoints.up('sm')]: {
             letterSpacing: 16,
           },
@@ -155,7 +167,6 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       alignSelf: 'center ',
       color: theme.palette.primary.contrastText,
       fontSize: '1rem',
-      fontWeight: 500,
       [theme.breakpoints.up('sm')]: {
         gridColumn: '2/-2',
         fontSize: '1.5rem',
@@ -232,9 +243,9 @@ export const HeroContent = () => {
         </div>
 
         <Typography className="descriptionText " component={'p'}>
-          Who is passionated about bringing both technical and pixel perfect
-          visuals of digital products to life through, clean, responsive code
-          with the users in minde.
+          Who is interested in design and passionate about bringing both
+          technical and pixel-perfect visuals of digital products to life
+          through responsive code and the users in mind.
         </Typography>
 
         <div className="ctaButtonContainer">

@@ -1,10 +1,11 @@
-import { Link, styled } from '@mui/material';
+import { styled } from '@mui/material';
 import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import Button from '@mui/material/Button';
 
 import './HamburgerMenu.css';
+import { NavItems } from '../Navbar/NavItems';
 
 type IAlign = 'top' | 'left' | 'bottom' | 'right';
 
@@ -12,6 +13,7 @@ const BurgerMenuBtnContainer = styled(Button)(({ theme }) => ({
   gridColumn: '4/5',
   display: 'flex',
   justifyContent: 'end',
+  padding: 'unset',
 }));
 const NavDrawer = styled(Drawer)(({ theme }) => ({
   '.MuiDrawer-paper': {
@@ -23,16 +25,6 @@ const NavDrawer = styled(Drawer)(({ theme }) => ({
 const ListItemsContainer = styled(Box)(({ theme }) => ({
   gridRow: '2/9',
   display: 'flex',
-
-  ul: {
-    width: '100%',
-    padding: 20,
-    listStyleType: 'none',
-    li: {
-      textDecoration: 'none',
-      lineHeight: 2,
-    },
-  },
 }));
 
 export const HamburgerMenu = () => {
@@ -71,20 +63,7 @@ export const HamburgerMenu = () => {
       onClick={toggleDrawer(align, false)}
       onKeyDown={toggleDrawer(align, false)}
     >
-      <ul>
-        <Link href="/" component={'li'}>
-          Home
-        </Link>
-        {/* <Link href="/" component={'li'}>
-          Protfolio
-        </Link>
-        <Link href="/" component={'li'}>
-          About me
-        </Link>
-        <Link href="/" component={'li'}>
-          Contact
-        </Link> */}
-      </ul>
+      <NavItems />
     </ListItemsContainer>
   );
 
@@ -100,10 +79,8 @@ export const HamburgerMenu = () => {
           <div></div>
         </div>
       </BurgerMenuBtnContainer>
-      {/* <Button onClick={toggleDrawer('right', true)}>Button</Button> */}
 
       <NavDrawer
-        sx={{ zIndex: 10 }}
         anchor={'right'}
         open={alignment['right']}
         onClose={toggleDrawer('right', false)}

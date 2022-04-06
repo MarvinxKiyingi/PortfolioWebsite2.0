@@ -6,13 +6,22 @@ export const NavBar = styled('nav')(({ theme }) => ({
   gridGap: '20px',
   margin: '20px 20px',
   backgroundColor: 'transparent',
-  [theme.breakpoints.up('sm')]: {
+  [theme.breakpoints.up('md')]: {
     gridTemplateColumns: 'repeat(12,1fr)',
+    margin: '20px 20px 0px',
   },
 
   '.BurgerMenuBtn': {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       display: 'none',
+    },
+  },
+  '.navItems': {
+    display: 'none',
+
+    [theme.breakpoints.up('md')]: {
+      display: 'flex',
+      gridColumn: '3/-3',
     },
   },
 }));
