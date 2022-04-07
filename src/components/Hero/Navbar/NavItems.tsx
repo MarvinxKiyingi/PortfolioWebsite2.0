@@ -23,15 +23,16 @@ const NavItemsWrapper = styled(Box)(({ theme }) => ({
 export const NavItems = () => {
   return (
     <NavItemsWrapper className="navItems">
-      <Link href="https://mui.com/components/links/" underline="hover">
-        Home
-      </Link>
       <Link href="/" underline="hover">
-        Protfolio
+        Home
       </Link>
       <Link href="/" underline="hover">
         About me
       </Link>
+      <Link href="/" underline="hover">
+        Protfolio
+      </Link>
+
       <Link href="/" underline="hover">
         Contact
       </Link>
