@@ -54,12 +54,14 @@ const HeroContainer = styled('header')(({ theme }) => ({
   '.socialLinksContainer': {
     display: 'none',
     [theme.breakpoints.up('md')]: {
-      gridColumn: '11/-1',
+      gridColumn: '12/-1',
       display: 'flex',
       justifyContent: 'space-around',
       gap: theme.spacing(2),
     },
     [theme.breakpoints.up('lg')]: {
+      gridColumn: '11/-1',
+
       justifyContent: 'flex-end',
       gap: theme.spacing(2),
     },

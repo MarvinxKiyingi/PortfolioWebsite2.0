@@ -26,8 +26,8 @@ export const NavItems = () => {
       <Link href="/" underline="hover">
         Home
       </Link>
-      <Link href="/" underline="hover">
-        About me
+      <Link href="/#About" underline="hover">
+        About
       </Link>
       <Link href="/" underline="hover">
         Protfolio
