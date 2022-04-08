@@ -43,6 +43,9 @@ export const mainTheme = createTheme({
     background: {
       default: '#d7e3e0',
     },
+    common: {
+      black: '#000000',
+    },
   },
 
   // Typography

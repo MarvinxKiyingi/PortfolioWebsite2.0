@@ -1,0 +1,85 @@
+.BurgerMenuBtn {
+  position: relative;
+  background-color: transparent;
+  cursor: pointer;
+}
+.BurgerMenuBtn .BurgerLayer {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BurgerMenuBtn .BurgerLayer div {
+  display: block;
+  width: 40px;
+  height: 4px;
+  position: relative;
+  background-color: #000000;
+  -webkit-transition: background-color 0.35s 0s ease-out;
+  transition: background-color 0.35s 0s ease-out;
+}
+
+.BurgerMenuBtn .BurgerLayer ::before,
+.BurgerMenuBtn .BurgerLayer ::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 4px;
+  background-color: #000000;
+  -webkit-transition: top 0.2s 0.4s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    -webkit-transform 0.2s ease-out;
+  transition: top 0.2s 0.4s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    -webkit-transform 0.2s ease-out;
+  transition: top 0.2s 0.4s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out, transform 0.2s ease-out;
+  transition: top 0.2s 0.4s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out, transform 0.2s ease-out,
+    -webkit-transform 0.2s ease-out;
+}
+.BurgerMenuBtn .BurgerLayer ::before {
+  top: 12px;
+  left: 20px;
+}
+
+.BurgerMenuBtn .BurgerLayer ::after {
+  top: -12px;
+  right: 20px;
+}
+
+/* animate */
+header nav .animate .BurgerLayer div {
+  background-color: transparent;
+}
+
+header nav .animate .BurgerLayer div::before,
+header nav .animate .BurgerLayer div::after {
+  top: 0;
+  width: 40px;
+  transition: top 0.2s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    -webkit-transform 0.2s 0.4s ease-out;
+  transition: top 0.2s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    -webkit-transform 0.2s 0.4s ease-out;
+  transition: top 0.2s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    transform 0.2s 0.4s ease-out;
+  transition: top 0.2s ease-out, left 0.2s 0.2s ease-out,
+    right 0.2s 0.2s ease-out, width 0.2s 0.2s ease-out,
+    transform 0.2s 0.4s ease-out, -webkit-transform 0.2s 0.4s ease-out;
+}
+
+header nav .animate .BurgerLayer div::before {
+  left: 0;
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+header nav .animate .BurgerLayer div::after {
+  right: 0;
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}
