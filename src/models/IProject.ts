@@ -4,5 +4,5 @@ export interface IProject {
   mobileImg: string;
   description: string;
   githubLink: string;
-  livePage: string;
+  livePage?: string;
 }
