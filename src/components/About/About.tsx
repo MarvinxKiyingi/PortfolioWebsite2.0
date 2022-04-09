@@ -42,8 +42,10 @@ const AboutContainer = styled(Box)(({ theme }) => ({
     },
     [theme.breakpoints.up('md')]: {
       display: 'grid',
-      gridTemplateColumns: 'repeat(2,1fr)',
-      margin: 20,
+      // gridTemplateColumns: 'repeat(2,1fr)',
+      gridTemplateColumns: 'repeat(2, minmax(0, 1fr));',
+      gridAutoRows: '1fr',
+      padding: '20px 0px',
     },
 
     h1: {
@@ -55,7 +57,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         gridColumn: '2/-2',
       },
       [theme.breakpoints.up('md')]: {
-        display: 'none',
+        textAlign: 'initial',
       },
     },
     '.descriptiveText': {
@@ -87,16 +89,23 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         gridTemplateRows: 'repeat(4,1fr)',
 
         gap: '20px',
-        minHeight: 200,
+        // minHeight: 200,
+        // height: '85%',
         padding: 20,
         [theme.breakpoints.up('xs')]: {
           gridTemplateRows: 'unset',
           gridTemplateColumns: 'repeat(2,1fr)',
         },
-        [theme.breakpoints.up('lg')]: {
-          gridTemplateColumns: 'repeat(4,1fr)',
+        [theme.breakpoints.up('sm')]: {
+          borderRadius: 16,
+        },
+        [theme.breakpoints.up('md')]: {
           backgroundColor: theme.palette.background.paper,
         },
+        // [theme.breakpoints.up('xl')]: {
+        //   gridTemplateColumns: 'repeat(4,1fr)',
+        //   backgroundColor: theme.palette.background.paper,
+        // },
         '.skillContentContainer': {
           display: 'grid',
           gap: 20,
@@ -107,25 +116,27 @@ const AboutContainer = styled(Box)(({ theme }) => ({
             padding: theme.spacing(2, 1),
           },
           [theme.breakpoints.up('sm')]: {
-            padding: theme.spacing(4),
+            padding: theme.spacing(3),
           },
           [theme.breakpoints.up('md')]: {
             padding: theme.spacing(2, 1),
+            backgroundColor: theme.palette.background.default,
+            // backgroundColor: theme.palette.primary.main,
           },
-          [theme.breakpoints.up('lg')]: {
-            '&.one': {
-              gridColumn: 0,
-            },
-            '&.two': {
-              gridColumn: 3,
-            },
-            '&.three': {
-              gridColumn: 2,
-            },
-            '&.four': {
-              gridColumn: 4,
-            },
-          },
+          // [theme.breakpoints.up('xl')]: {
+          //   '&.one': {
+          //     gridColumn: 0,
+          //   },
+          //   '&.two': {
+          //     gridColumn: 3,
+          //   },
+          //   '&.three': {
+          //     gridColumn: 2,
+          //   },
+          //   '&.four': {
+          //     gridColumn: 4,
+          //   },
+          // },
           h3: {
             textAlign: 'center',
             gridColumn: '1fr',
@@ -145,7 +156,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         },
       },
     },
-    '.show': {
+    '.showOnDesktop': {
       display: 'none',
       [theme.breakpoints.up('md')]: {
         display: 'initial',
@@ -164,19 +175,19 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         borderRadius: 20,
         padding: theme.spacing(2),
       },
-      [theme.breakpoints.up('lg')]: {
-        maxHeight: 412,
-      },
+      // [theme.breakpoints.up('lg')]: {
+      //   maxHeight: 412,
+      // },
     },
     '.meEmojiContainer': {
       [theme.breakpoints.up('md')]: {
         display: 'flex',
         justifyContent: 'center',
+        position: 'relative',
 
         '.meEmojiTwo': {
-          alignSelf: 'center',
-          maxWidth: '80%',
-          maxHeight: '80%',
+          position: 'absolute',
+          height: '90%',
         },
       },
     },
@@ -187,16 +198,15 @@ export const About = () => {
   return (
     <AboutContainer className="aboutContainer" id="About">
       <Box className="aboutContent">
-        <Typography className="" component={'h1'}>
-          About
-        </Typography>
-        <Box className="show grid ">
+        <Box className="showOnDesktop grid ">
           <Typography className="aboutHeadingPuzzle" component={'h2'}>
             Ab
           </Typography>
         </Box>
 
         <Box className="descriptiveText grid">
+          <Typography component={'h1'}>About</Typography>
+
           <Typography component={'p'}>
             I’m a 25 years old tech geek and developer located in
             Stockholm,Sweden. When i’m not creating magic for the web trough
@@ -252,18 +262,18 @@ export const About = () => {
             </Box>
           </Box>
         </Box>
-        <Box className="show grid">
+        <Box className="showOnDesktop grid">
           <Typography className="aboutHeadingPuzzle" component={'h2'}>
             Out
           </Typography>
         </Box>
 
-        <Box className="show grid ">
+        <Box className="showOnDesktop grid ">
           <Typography className="aboutHeadingPuzzle" component={'h2'}>
             Me
           </Typography>
         </Box>
-        <Box className="show grid meEmojiContainer">
+        <Box className="showOnDesktop grid meEmojiContainer">
           <img className="meEmojiTwo" src={meEmojiTwo} alt="Me emoji" />
         </Box>
       </Box>
