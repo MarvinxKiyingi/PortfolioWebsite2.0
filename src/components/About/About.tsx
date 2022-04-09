@@ -45,7 +45,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
       // gridTemplateColumns: 'repeat(2,1fr)',
       gridTemplateColumns: 'repeat(2, minmax(0, 1fr));',
       gridAutoRows: '1fr',
-      padding: '20px 0px',
+      padding: '20px 20px',
     },
 
     h1: {
