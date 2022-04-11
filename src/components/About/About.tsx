@@ -42,13 +42,12 @@ const AboutContainer = styled(Box)(({ theme }) => ({
     },
     [theme.breakpoints.up('md')]: {
       display: 'grid',
-      // gridTemplateColumns: 'repeat(2,1fr)',
       gridTemplateColumns: 'repeat(2, minmax(0, 1fr));',
       gridAutoRows: '1fr',
       padding: '20px 20px',
     },
 
-    h1: {
+    '.descriptiveTextHeading': {
       ...theme.typography.h4,
       textAlign: 'center',
       padding: theme.spacing(1, 1, 2),
@@ -60,6 +59,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         textAlign: 'initial',
       },
     },
+
     '.descriptiveText': {
       ...theme.typography.body1,
       padding: 20,
@@ -83,14 +83,18 @@ const AboutContainer = styled(Box)(({ theme }) => ({
       [theme.breakpoints.up('md')]: {
         gridColumn: 'inherit',
       },
+
+      '.skillsHeading': {
+        [theme.breakpoints.up('md')]: {
+          ...theme.typography.h4,
+        },
+      },
+
       '.skillsContentContainer': {
         backgroundColor: theme.palette.primary.main,
         display: 'grid',
         gridTemplateRows: 'repeat(4,1fr)',
-
         gap: '20px',
-        // minHeight: 200,
-        // height: '85%',
         padding: 20,
         [theme.breakpoints.up('xs')]: {
           gridTemplateRows: 'unset',
@@ -102,10 +106,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         [theme.breakpoints.up('md')]: {
           backgroundColor: theme.palette.background.paper,
         },
-        // [theme.breakpoints.up('xl')]: {
-        //   gridTemplateColumns: 'repeat(4,1fr)',
-        //   backgroundColor: theme.palette.background.paper,
-        // },
+
         '.skillContentContainer': {
           display: 'grid',
           gap: 20,
@@ -121,27 +122,19 @@ const AboutContainer = styled(Box)(({ theme }) => ({
           [theme.breakpoints.up('md')]: {
             padding: theme.spacing(2, 1),
             backgroundColor: theme.palette.background.default,
-            // backgroundColor: theme.palette.primary.main,
           },
-          // [theme.breakpoints.up('xl')]: {
-          //   '&.one': {
-          //     gridColumn: 0,
-          //   },
-          //   '&.two': {
-          //     gridColumn: 3,
-          //   },
-          //   '&.three': {
-          //     gridColumn: 2,
-          //   },
-          //   '&.four': {
-          //     gridColumn: 4,
-          //   },
-          // },
+
           h3: {
             textAlign: 'center',
             gridColumn: '1fr',
             lineHeight: 'unset',
+            fontWeight: 500,
+            // [theme.breakpoints.up('md')]: {
+            //   padding: theme.spacing(2, 1),
+            //   backgroundColor: theme.palette.background.default,
+            // },
           },
+
           '.skillIcon': {
             width: 24,
             height: 'auto',
@@ -149,6 +142,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
               width: 36,
             },
           },
+
           '.skillIconContentContainer': {
             display: 'flex',
             justifyContent: 'space-around',
@@ -156,17 +150,21 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         },
       },
     },
+
     '.showOnDesktop': {
       display: 'none',
       [theme.breakpoints.up('md')]: {
         display: 'initial',
       },
     },
+
     '.aboutHeadingPuzzle': {
       [theme.breakpoints.up('md')]: {
         ...theme.typography.h1,
+        fontSize: '12rem',
       },
     },
+
     '.grid': {
       [theme.breakpoints.up('md')]: {
         gridColumn: 'inherit',
@@ -175,10 +173,8 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         borderRadius: 20,
         padding: theme.spacing(2),
       },
-      // [theme.breakpoints.up('lg')]: {
-      //   maxHeight: 412,
-      // },
     },
+
     '.meEmojiContainer': {
       [theme.breakpoints.up('md')]: {
         display: 'flex',
@@ -205,7 +201,9 @@ export const About = () => {
         </Box>
 
         <Box className="descriptiveText grid">
-          <Typography component={'h1'}>About</Typography>
+          <Typography className="descriptiveTextHeading" component={'h1'}>
+            About
+          </Typography>
 
           <Typography component={'p'}>
             I’m a 25 years old tech geek and developer located in
@@ -221,7 +219,9 @@ export const About = () => {
         </Box>
 
         <Box className="skillsContainer grid">
-          <Typography component={'h2'}>Skills</Typography>
+          <Typography className="skillsHeading" component={'h2'}>
+            Skills
+          </Typography>
 
           <Box className="skillsContentContainer">
             <Box className="skillContentContainer one">
