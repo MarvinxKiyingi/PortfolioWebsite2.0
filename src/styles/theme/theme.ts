@@ -9,9 +9,10 @@ export const mainTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: '12px 15px',
+          padding: '13px 15px',
           borderRadius: 16,
           '&.MuiButton-outlined': {
+            padding: '10px 15px',
             border: '3px solid ',
           },
         },
@@ -42,6 +43,9 @@ export const mainTheme = createTheme({
     },
     background: {
       default: '#d7e3e0',
+    },
+    common: {
+      black: '#000000',
     },
   },
 
