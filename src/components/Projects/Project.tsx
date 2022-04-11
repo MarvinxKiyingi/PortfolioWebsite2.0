@@ -12,7 +12,7 @@ const ProjectContainer = styled(Box)(({ theme }) => ({
   '.title': {
     ...theme.typography.h6,
     lineHeight: 'unset',
-    marginTop: theme.spacing(2),
+    margin: theme.spacing(2, 0),
   },
   '.title,.description,.ctaButtonContainer': {
     width: '90%',
