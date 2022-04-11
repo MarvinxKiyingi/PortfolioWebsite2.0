@@ -253,7 +253,8 @@ export const HeroContent = () => {
             <Button
               className="cta"
               variant="contained"
-              href="https://www.linkedin.com/in/marvin-kiyingi-371525184/"
+              href="/#Portfolio"
+              aria-label="View portfolio"
             >
               Contact
             </Button>
