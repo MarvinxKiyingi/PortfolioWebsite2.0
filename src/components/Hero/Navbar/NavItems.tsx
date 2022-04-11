@@ -29,7 +29,7 @@ export const NavItems = () => {
       <Link href="/#About" underline="hover">
         About
       </Link>
-      <Link href="/" underline="hover">
+      <Link href="/#Portfolio" underline="hover">
         Protfolio
       </Link>
 
