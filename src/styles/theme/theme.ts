@@ -9,9 +9,10 @@ export const mainTheme = createTheme({
       },
       styleOverrides: {
         root: {
-          padding: '12px 15px',
+          padding: '13px 15px',
           borderRadius: 16,
           '&.MuiButton-outlined': {
+            padding: '10px 15px',
             border: '3px solid ',
           },
         },

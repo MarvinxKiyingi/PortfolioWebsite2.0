@@ -3,8 +3,6 @@ import meEmoji from '../../../styles/images/meemoji.png';
 
 const ContentConatiner = styled('div')(({ theme }) => ({
   margin: 'auto 20px',
-  // maxWidth: 1520,
-  // maxWidth: 2520,
 
   '.HeroContant': {
     minHeight: '80vh',
@@ -19,7 +17,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       color: theme.palette.primary.contrastText,
       textTransform: 'uppercase',
       ...theme.typography.h4,
-      fontSize: '2.5rem',
+      fontSize: '2rem',
       [theme.breakpoints.up('xs')]: {
         fontSize: '3rem',
       },
