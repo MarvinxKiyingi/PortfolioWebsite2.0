@@ -6,11 +6,12 @@ import Button from '@mui/material/Button';
 
 import './HamburgerMenu.css';
 import { NavItems } from '../Navbar/NavItems';
+import { SocialLinks } from '../../SocialLinks/SocialLinks';
 
 type IAlign = 'top' | 'left' | 'bottom' | 'right';
 
 const BurgerMenuBtnContainer = styled(Button)(({ theme }) => ({
-  gridColumn: '4/5',
+  minWidth: 'unset',
   display: 'flex',
   justifyContent: 'end',
   padding: 'unset',
@@ -25,6 +26,7 @@ const NavDrawer = styled(Drawer)(({ theme }) => ({
 const ListItemsContainer = styled(Box)(({ theme }) => ({
   gridRow: '2/9',
   display: 'flex',
+  flexDirection: 'column',
 }));
 
 export const HamburgerMenu = () => {
@@ -64,6 +66,7 @@ export const HamburgerMenu = () => {
       onKeyDown={toggleDrawer(align, false)}
     >
       <NavItems />
+      <SocialLinks />
     </ListItemsContainer>
   );
 
