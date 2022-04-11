@@ -254,7 +254,7 @@ export const HeroContent = () => {
               href="/#Portfolio"
               aria-label="View portfolio"
             >
-              Contact
+              My creations
             </Button>
           </div>
         </div>
