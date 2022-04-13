@@ -3,7 +3,7 @@ import { Link, Box, styled } from '@mui/material';
 const NavItemsWrapper = styled(Box)(({ theme }) => ({
   width: '100%',
   height: '100%',
-  padding: 20,
+  padding: theme.spacing(2, 2, 0),
   display: 'flex',
   flexDirection: 'column',
   a: {
