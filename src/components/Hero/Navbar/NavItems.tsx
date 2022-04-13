@@ -30,7 +30,7 @@ export const NavItems = () => {
         About
       </Link>
       <Link href="/#Portfolio" underline="hover">
-        Protfolio
+        Portfolio
       </Link>
 
       <Link href="/" underline="hover">
