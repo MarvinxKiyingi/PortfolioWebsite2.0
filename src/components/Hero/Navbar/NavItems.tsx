@@ -33,7 +33,7 @@ export const NavItems = () => {
         Portfolio
       </Link>
 
-      <Link href="/" underline="hover">
+      <Link href="/#Contact" underline="hover">
         Contact
       </Link>
     </NavItemsWrapper>
