@@ -14,6 +14,9 @@ const SocialLinksContainer = styled(Box)(({ theme }) => ({
   '.socaiLinks': {
     color: theme.palette.primary.main,
   },
+  [theme.breakpoints.up('md')]: {
+    padding: 'initial',
+  },
 }));
 
 export const SocialLinks = () => {
