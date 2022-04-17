@@ -38,6 +38,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
       [theme.breakpoints.up('md')]: {
         flex: 1,
         maxWidth: 300,
+        margin: theme.spacing(3, 3),
       },
     },
     '.email': {
@@ -88,7 +89,9 @@ export const Footer = () => {
               <LinkedInIcon />
             </IconButton>
           </Box>
-          <Typography className="copyright">&copy; 2022</Typography>
+          <Box className="copyrightContainer">
+            <Typography className="copyright">&copy; 2022</Typography>
+          </Box>
         </Box>
       </Box>
     </FooterContainer>
