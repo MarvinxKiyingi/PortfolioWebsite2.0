@@ -1,6 +1,7 @@
 import { ThemeProvider } from '@mui/material/styles';
 import { About } from './components/About/About';
 import { AppWrapper } from './components/AppWrapper/AppWrapper';
+import { BackToToButton } from './components/BackToTopButton/BackToToButton';
 import { Footer } from './components/Footer/Footer';
 import { Hero } from './components/Hero/Hero';
 import { Projects } from './components/Projects/Projects';
@@ -14,6 +15,7 @@ function App() {
         <About />
         <Projects />
         <Footer />
+        <BackToToButton />
       </AppWrapper>
     </ThemeProvider>
   );
