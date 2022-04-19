@@ -24,8 +24,8 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       [theme.breakpoints.up('sm')]: {
         fontSize: '4.9rem',
       },
-      [theme.breakpoints.up('md')]: {
-        fontSize: 'clamp(24px, 6vw, 178px)',
+      [theme.breakpoints.up('xl')]: {
+        fontSize: 'clamp(78.4px, 6vw, 144px)',
       },
     },
 
@@ -39,6 +39,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         gridTemplateColumns: 'repeat(12,1fr)',
       },
       [theme.breakpoints.up('md')]: {
+        gridColumn: '1/-2',
         '& div:nth-of-type(1)': {
           order: 2,
         },
@@ -58,15 +59,11 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         [theme.breakpoints.up('sm')]: {
           gridColumn: '3/6',
           margin: 'unset',
-          // margin: '0px 25px',
         },
         [theme.breakpoints.up('md')]: {
           gridColumn: '9/11',
-          margin: '0 0 -20%',
+          margin: '0 0 -25%',
           maxWidth: '80%',
-        },
-        [theme.breakpoints.up('lg')]: {
-          margin: '0 0 -10%',
         },
 
         '.meEmoji': {
@@ -125,36 +122,30 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           writingMode: 'vertical-lr',
           letterSpacing: 8,
           ...theme.typography.h6,
-          fontSize: 14,
+          fontSize: 16,
           [theme.breakpoints.up('xs')]: {
             ...theme.typography.h6,
           },
           [theme.breakpoints.up('sm')]: {
             letterSpacing: 16,
           },
-          [theme.breakpoints.up('md')]: {
-            letterSpacing: 12,
+          [theme.breakpoints.up('lg')]: {
             ...theme.typography.h5,
             lineHeight: 'unset ',
           },
-          [theme.breakpoints.up('lg')]: {
-            ...theme.typography.h4,
-            lineHeight: 'unset ',
-          },
-          [theme.breakpoints.up('xl')]: {},
         },
       },
 
       '.secondHeadingContainer-headingWrapper': {
         display: 'flex',
         alignItems: 'center',
+        [theme.breakpoints.up('sm')]: {
+          gridColumn: '2/-2',
+        },
         h1: {
           [theme.breakpoints.up('md')]: {
             margin: theme.spacing(2, 0, 0),
           },
-        },
-        [theme.breakpoints.up('sm')]: {
-          gridColumn: '2/-2',
         },
       },
     },
@@ -167,10 +158,9 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       fontSize: '1rem',
       [theme.breakpoints.up('sm')]: {
         gridColumn: '2/-2',
-        fontSize: '1.5rem',
       },
-      [theme.breakpoints.up('lg')]: {
-        fontSize: '1.8rem',
+      [theme.breakpoints.up('xl')]: {
+        fontSize: '1.6rem',
       },
     },
 
@@ -181,16 +171,13 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       margin: 'auto 0px',
       [theme.breakpoints.up('md')]: {
         gridTemplateColumns: 'repeat(12,1fr)',
-      },
-      [theme.breakpoints.up('md')]: {
-        gridTemplateColumns: 'repeat(12,1fr)',
+        gridColumn: '2/-2',
       },
 
       '.ctaButtonContainer-ctaButtonWrapper': {
-        gridColumn: '1/-1',
+        gridColumn: '2/4',
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
         [theme.breakpoints.up('md')]: {
           gridColumn: '2/-2',
         },
