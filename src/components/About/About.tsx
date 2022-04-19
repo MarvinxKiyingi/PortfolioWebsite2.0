@@ -69,6 +69,11 @@ const AboutContainer = styled(Box)(({ theme }) => ({
       [theme.breakpoints.up('md')]: {
         gridColumn: 'inherit',
       },
+      [theme.breakpoints.up('xl')]: {
+        p: {
+          fontSize: '1.2rem',
+        },
+      },
     },
 
     '.skillsContainer': {
@@ -129,10 +134,6 @@ const AboutContainer = styled(Box)(({ theme }) => ({
             gridColumn: '1fr',
             lineHeight: 'unset',
             fontWeight: 500,
-            // [theme.breakpoints.up('md')]: {
-            //   padding: theme.spacing(2, 1),
-            //   backgroundColor: theme.palette.background.default,
-            // },
           },
 
           '.skillIcon': {
@@ -160,6 +161,10 @@ const AboutContainer = styled(Box)(({ theme }) => ({
 
     '.aboutHeadingPuzzle': {
       [theme.breakpoints.up('md')]: {
+        ...theme.typography.h1,
+        fontSize: '9rem',
+      },
+      [theme.breakpoints.up('xl')]: {
         ...theme.typography.h1,
         fontSize: '12rem',
       },

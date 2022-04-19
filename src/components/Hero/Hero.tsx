@@ -66,7 +66,6 @@ const HeroContainer = styled('header')(({ theme }) => ({
 }));
 const HeroContentWrapper = styled(Box)(({ theme }) => ({
   maxWidth: 2520,
-  margin: '0 auto',
   flex: 2,
   display: 'flex',
   flexDirection: 'column',
