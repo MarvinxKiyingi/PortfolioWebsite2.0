@@ -14,7 +14,11 @@ const ProjectsContainer = styled(Box)(({ theme }) => ({
     lineHeight: 'unset',
     // @ts-ignore
     ...theme.typography.h4,
-    padding: theme.spacing(1, 1, 2),
+    padding: theme.spacing(2, 1, 2),
+    [theme.breakpoints.up('xl')]: {
+      // @ts-ignore
+      ...theme.typography.h3,
+    },
   },
   '.projectsContent': {
     display: 'flex',
