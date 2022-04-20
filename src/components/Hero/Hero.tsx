@@ -21,16 +21,19 @@ const HeroContainer = styled('header')(({ theme }) => ({
   '.heroImg': {
     position: 'absolute',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     objectFit: 'cover',
     objectPosition: 'top left',
     backgroundRepeat: 'no-repeat',
     filter: 'opacity(80%)',
+    [theme.breakpoints.up('xl')]: {
+      height: '100%',
+    },
   },
   '.grain': {
     position: 'absolute',
     width: '100%',
-    height: '100vh',
+    height: '100%',
     backgroundImage: `url(${noise})`,
     backgroundRepeat: 'repeat',
     mixBlendMode: 'overlay',
@@ -69,6 +72,7 @@ const HeroContentWrapper = styled(Box)(({ theme }) => ({
   flex: 2,
   display: 'flex',
   flexDirection: 'column',
+  alignSelf: 'center',
 }));
 
 export const Hero = () => {

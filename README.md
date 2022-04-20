@@ -1,6 +1,6 @@
 # Protfolio website 2.0
 
-Thi is my second portfolio website, built mostly with material ui to mostly show my projects in a user friendly UI.
+This is my second portfolio website, built mostly with material ui to mostly show my projects in a user friendly UI.
 
 ## Available Scripts
 

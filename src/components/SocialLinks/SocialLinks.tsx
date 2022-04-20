@@ -23,25 +23,25 @@ export const SocialLinks = () => {
   return (
     <SocialLinksContainer className="socialLinksContainer">
       <IconButton className="socaiLinks" href={resume} target="_blank">
-        <AttachFileIcon />
+        <AttachFileIcon fontSize="inherit" />
       </IconButton>
       <IconButton
         className="socaiLinks"
         href="mailto: marvinxkiyingi@gmail.com"
       >
-        <EmailIcon />
+        <EmailIcon fontSize="inherit" />
       </IconButton>
       <IconButton
         className="socaiLinks"
         href="https://github.com/MarvinxKiyingi"
       >
-        <GitHubIcon />
+        <GitHubIcon fontSize="inherit" />
       </IconButton>
       <IconButton
         className="socaiLinks"
         href="https://www.linkedin.com/in/marvin-kiyingi-371525184"
       >
-        <LinkedInIcon />
+        <LinkedInIcon fontSize="inherit" />
       </IconButton>
     </SocialLinksContainer>
   );
