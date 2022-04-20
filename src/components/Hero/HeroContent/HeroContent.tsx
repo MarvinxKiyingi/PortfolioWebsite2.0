@@ -9,6 +9,9 @@ const ContentConatiner = styled('div')(({ theme }) => ({
     display: 'grid',
     gridTemplateColumns: 'repeat(4,1fr)',
     gridGap: '20px',
+    margin: -1,
+    padding: '20px 0',
+
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: 'repeat(12,1fr)',
     },
@@ -25,7 +28,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         fontSize: '4.9rem',
       },
       [theme.breakpoints.up('xl')]: {
-        fontSize: 'clamp(78.4px, 6vw, 144px)',
+        fontSize: 'clamp(78.4px, 6vw, 168px)',
       },
     },
 
@@ -62,8 +65,11 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         },
         [theme.breakpoints.up('md')]: {
           gridColumn: '9/11',
-          margin: '0 0 -25%',
-          maxWidth: '80%',
+          margin: '0 0 -15%',
+          maxWidth: '60%',
+        },
+        [theme.breakpoints.up('xl')]: {
+          gridColumn: '9/12',
         },
 
         '.meEmoji': {
@@ -123,6 +129,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           letterSpacing: 8,
           ...theme.typography.h6,
           fontSize: 16,
+          '-webkit-text-stroke-width': 'medium',
           [theme.breakpoints.up('xs')]: {
             ...theme.typography.h6,
           },
@@ -131,6 +138,10 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           },
           [theme.breakpoints.up('lg')]: {
             ...theme.typography.h5,
+            lineHeight: 'unset ',
+          },
+          [theme.breakpoints.up('xl')]: {
+            ...theme.typography.h4,
             lineHeight: 'unset ',
           },
         },

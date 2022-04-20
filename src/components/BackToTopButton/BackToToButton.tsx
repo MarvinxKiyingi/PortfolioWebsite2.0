@@ -10,6 +10,12 @@ const BackToTopButton = styled(IconButton)(({ theme }) => ({
   padding: 15,
   fontSize: '3rem',
   color: theme.palette.primary.main,
+  [theme.breakpoints.up('md')]: {
+    fontSize: '3.5rem',
+  },
+  [theme.breakpoints.up('xl')]: {
+    fontSize: '4rem',
+  },
 }));
 export const BackToToButton = () => {
   const [showUpTopButton, setShowUpTopButton] = useState(false);
@@ -23,7 +29,7 @@ export const BackToToButton = () => {
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
-      if (window.pageYOffset > window.innerHeight * 1) {
+      if (window.pageYOffset > window.innerHeight * 0.8) {
         setShowUpTopButton(true);
       } else {
         setShowUpTopButton(false);

@@ -11,6 +11,8 @@ const FooterContainer = styled(Box)(({ theme }) => ({
   backgroundColor: theme.palette.secondary.main,
 
   '.footerContent': {
+    maxWidth: 2530,
+    alignSelf: 'center',
     width: '90%',
     display: 'flex',
     flexDirection: 'column',
@@ -20,7 +22,8 @@ const FooterContainer = styled(Box)(({ theme }) => ({
     [theme.breakpoints.up('md')]: {
       minHeight: 'initial',
       height: 'initial',
-      flexDirection: 'row',
+      display: 'grid',
+      gridTemplateColumns: 'repeat(12,1fr)',
     },
     '.greetingsCircle': {
       backgroundColor: theme.palette.primary.main,
@@ -36,32 +39,44 @@ const FooterContainer = styled(Box)(({ theme }) => ({
         ...theme.typography.h4,
       },
       [theme.breakpoints.up('md')]: {
-        flex: 1,
-        maxWidth: 300,
+        maxWidth: 450,
         margin: theme.spacing(3, 3),
+        gridColumn: '2/5',
       },
     },
-    '.email': {
-      textTransform: 'uppercase',
-      ...theme.typography.h6,
-    },
+
     '.socaiLinksContainer': {
       flex: 1,
       display: 'contents',
       [theme.breakpoints.up('md')]: {
         display: 'flex',
-        flexDirection: 'column',
         flex: 2,
         alignItems: 'center',
-        height: '100%',
         padding: theme.spacing(3, 0),
         justifyContent: 'space-evenly',
+        gridColumn: '5/-1',
+      },
+      '.email': {
+        textTransform: 'uppercase',
+        ...theme.typography.h6,
+        fontSize: '1rem',
+        [theme.breakpoints.up('xs')]: {
+          ...theme.typography.h6,
+        },
       },
     },
     '.socaiLinks': {
       display: 'flex',
       a: {
         color: theme.palette.primary.main,
+        fontSize: '2rem',
+      },
+    },
+    '.copyrightContainer': {
+      [theme.breakpoints.up('md')]: {
+        gridColumn: '2/-1',
+        textAlign: 'center',
+        padding: theme.spacing(2, 0),
       },
     },
   },
@@ -80,18 +95,18 @@ export const Footer = () => {
 
           <Box className="socaiLinks">
             <IconButton href={resume} target="_blank">
-              <AttachFileIcon />
+              <AttachFileIcon fontSize="inherit" />
             </IconButton>
             <IconButton href="https://github.com/MarvinxKiyingi">
-              <GitHubIcon />
+              <GitHubIcon fontSize="inherit" />
             </IconButton>
             <IconButton href="https://www.linkedin.com/in/marvin-kiyingi-371525184">
-              <LinkedInIcon />
+              <LinkedInIcon fontSize="inherit" />
             </IconButton>
           </Box>
-          <Box className="copyrightContainer">
-            <Typography className="copyright">&copy; 2022</Typography>
-          </Box>
+        </Box>
+        <Box className="copyrightContainer">
+          <Typography className="copyright">&copy; 2022</Typography>
         </Box>
       </Box>
     </FooterContainer>
