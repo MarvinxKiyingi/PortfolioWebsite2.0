@@ -8,13 +8,17 @@ const ProjectsContainer = styled(Box)(({ theme }) => ({
   minHeight: '100vh',
   maxWidth: 2520,
   margin: '0 auto',
+  [theme.breakpoints.up('md')]: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
 
   '.projectsContainerHeading': {
     textAlign: 'center',
     lineHeight: 'unset',
     // @ts-ignore
     ...theme.typography.h4,
-    padding: theme.spacing(2, 1, 2),
+    padding: theme.spacing(4, 1, 2),
     [theme.breakpoints.up('xl')]: {
       // @ts-ignore
       ...theme.typography.h3,
@@ -28,6 +32,7 @@ const ProjectsContainer = styled(Box)(({ theme }) => ({
       display: 'grid',
       gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
       gridGap: 20,
+      flex: 1,
     },
   },
 }));

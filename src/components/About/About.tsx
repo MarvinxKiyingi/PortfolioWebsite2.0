@@ -28,9 +28,14 @@ import nodeJs from '../../styles/svgs/nodeJs.svg';
 import meEmojiTwo from '../../styles/images/meemojiTwo.png';
 
 const AboutContainer = styled(Box)(({ theme }) => ({
-  minHeight: '100vh',
   maxWidth: 2520,
   margin: '0 auto',
+  [theme.breakpoints.up('md')]: {
+    minHeight: '100vh',
+  },
+  [theme.breakpoints.up('xl')]: {
+    minHeight: '100vh',
+  },
   '.aboutContent': {
     display: 'flex',
     flexDirection: 'column',
@@ -45,6 +50,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
       gridTemplateColumns: 'repeat(2, minmax(0, 1fr));',
       gridAutoRows: '1fr',
       padding: '20px 20px',
+      minHeight: '100vh',
     },
 
     '.descriptiveTextHeading': {
@@ -87,8 +93,10 @@ const AboutContainer = styled(Box)(({ theme }) => ({
       },
       [theme.breakpoints.up('md')]: {
         gridColumn: 'inherit',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
       },
-
       '.skillsHeading': {
         [theme.breakpoints.up('md')]: {
           ...theme.typography.h4,
@@ -110,6 +118,8 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         },
         [theme.breakpoints.up('md')]: {
           backgroundColor: theme.palette.background.paper,
+          height: '100%',
+          maxHeight: '70%',
         },
 
         '.skillContentContainer': {
