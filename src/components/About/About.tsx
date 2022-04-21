@@ -95,7 +95,7 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         gridColumn: 'inherit',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-evenly',
+        justifyContent: 'inherit',
       },
       '.skillsHeading': {
         [theme.breakpoints.up('md')]: {
@@ -118,8 +118,6 @@ const AboutContainer = styled(Box)(({ theme }) => ({
         },
         [theme.breakpoints.up('md')]: {
           backgroundColor: theme.palette.background.paper,
-          height: '100%',
-          maxHeight: '70%',
         },
 
         '.skillContentContainer': {

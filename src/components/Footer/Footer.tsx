@@ -40,7 +40,7 @@ const FooterContainer = styled(Box)(({ theme }) => ({
       },
       [theme.breakpoints.up('md')]: {
         maxWidth: 450,
-        margin: theme.spacing(3, 3),
+        margin: theme.spacing(4, 3),
         gridColumn: '2/5',
       },
     },
