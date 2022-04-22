@@ -24,7 +24,7 @@ export const ProjectList: Array<IProject> = [
     desktopImg: lateNightBrunchDesktopImg,
     mobileImg: lateNightBrunchMobileImg,
     description:
-      'A todo list app that is connected to a database. Was mad to learn Node Js basics and working with a database.',
+      'A resturant page with the ablility to create a reservation onto an database using react & typescript.',
     githubLink: 'https://github.com/MarvinxKiyingi/LateNightBrunch',
     livePage: 'https://late-night-brunch.netlify.app',
   },
