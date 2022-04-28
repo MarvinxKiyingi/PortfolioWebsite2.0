@@ -8,14 +8,25 @@ import lateNightBrunchDesktopImg from '../../styles/images/lateNightBrunch-Deskt
 import lateNightBrunchMobileImg from '../../styles/images/lateNightBrunch-Mobile.png';
 import myFirstCodedWebbsiteDesktopImg from '../../styles/images/myFirstCodedWebbsite-Desktop.jpg';
 import myFirstCodedWebbsiteMobileImg from '../../styles/images/myFirstCodedWebbsite-Mobile.png';
+import barkerDesktopImg from '../../styles/images/barker-Desktop.jpg';
+import barkerMobileImg from '../../styles/images/barker-Mobile.png';
 
 export const ProjectList: Array<IProject> = [
+  {
+    title: 'Barker',
+    desktopImg: barkerDesktopImg,
+    mobileImg: barkerMobileImg,
+    description:
+      'This is my degree project, where I came up with the idea of creating a tinder-like app for dog owners.',
+    githubLink: 'https://github.com/MarvinxKiyingi/barker',
+    livePage: 'https://barkerr.netlify.app/',
+  },
   {
     title: 'Digital poster',
     desktopImg: posterGirlDesktopImg,
     mobileImg: posterGirlMobileImg,
     description:
-      'This is a fictional digital poster for the launch of one of my favorite artists fake tour for her latest album release',
+      'This is a fictional digital poster for the launch of one of my favorite artists fake tour for her latest album release.',
     githubLink: 'https://github.com/MarvinxKiyingi/PosterGirlTour-LandingPage',
     livePage: 'https://marvinxkiyingi.github.io/PosterGirlTour-LandingPage',
   },
