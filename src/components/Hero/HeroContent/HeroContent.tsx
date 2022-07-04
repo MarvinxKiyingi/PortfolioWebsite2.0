@@ -14,6 +14,8 @@ const ContentConatiner = styled('div')(({ theme }) => ({
 
     [theme.breakpoints.up('sm')]: {
       gridTemplateColumns: 'repeat(12,1fr)',
+      // alignContent: 'center',
+      alignItems: 'center',
     },
 
     h1: {
@@ -25,7 +27,10 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         fontSize: '3rem',
       },
       [theme.breakpoints.up('sm')]: {
-        fontSize: '4.9rem',
+        fontSize: '4rem',
+      },
+      [theme.breakpoints.up('md')]: {
+        fontSize: '5rem',
       },
       [theme.breakpoints.up('xl')]: {
         fontSize: 'clamp(78.4px, 6vw, 168px)',
@@ -64,9 +69,9 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           margin: 'unset',
         },
         [theme.breakpoints.up('md')]: {
-          gridColumn: '9/11',
-          margin: '0 0 -15%',
-          maxWidth: '60%',
+          gridColumn: '9/12',
+          // margin: '0 0 -15%',
+          // maxWidth: '60%',
         },
         [theme.breakpoints.up('xl')]: {
           gridColumn: '9/12',
@@ -84,11 +89,11 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         justifyContent: 'end',
         [theme.breakpoints.up('sm')]: {
           gridColumn: '6/12',
-          alignItems: 'end',
+          // alignItems: 'end',
         },
         [theme.breakpoints.up('md')]: {
           gridColumn: '2/9',
-          alignItems: 'end',
+          // alignItems: 'end',
           justifyContent: 'initial',
         },
 
@@ -106,6 +111,8 @@ const ContentConatiner = styled('div')(({ theme }) => ({
       display: 'flex',
       [theme.breakpoints.up('sm')]: {
         gridColumn: '2/-2',
+        height: 'fit-content',
+        alignItems: 'center',
       },
 
       '.rotatedContainer': {
@@ -118,6 +125,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
         padding: '6px',
         [theme.breakpoints.up('sm')]: {
           padding: theme.spacing(),
+          height: 'fit-content',
         },
         [theme.breakpoints.up('xl')]: {
           padding: '18px',
@@ -129,7 +137,7 @@ const ContentConatiner = styled('div')(({ theme }) => ({
           letterSpacing: 8,
           ...theme.typography.h6,
           fontSize: 16,
-          '-webkit-text-stroke-width': 'medium',
+          // '-webkit-text-stroke-width': 'medium',
           [theme.breakpoints.up('xs')]: {
             ...theme.typography.h6,
           },
